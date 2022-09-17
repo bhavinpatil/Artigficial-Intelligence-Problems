@@ -3,7 +3,8 @@ using namespace std;
 
 char board[3][3] = {{'1', '2', '3'}, {'4', '5', '6'}, {'7', '8', '9'}};
 
-char currenr_marker;
+char 
+;
 int current_player;
 
 void display()
@@ -31,7 +32,7 @@ bool placeMarker(int slot)
 
     if (board[row][col] != 'X' && board[row][col] != 'O')
     {
-        board[row][col] = currenr_marker;
+        board[row][col] = current_marker;
         return true;
     }
     else
@@ -57,10 +58,10 @@ int winner()
 
 void swapPlayer()
 {
-    if (currenr_marker == 'X')
-        currenr_marker = 'O';
+    if (current_marker == 'X')
+        current_marker = 'O';
     else
-        currenr_marker = 'X';
+        current_marker = 'X';
 
     if (current_player == 1)
         current_player = 2;
@@ -76,13 +77,13 @@ void start()
     char markp1;
     cin >> markp1;
 
-    currenr_marker = markp1;
+    current_marker = markp1;
 
     display();
 
     for (int i = 0; i < 9; i++)
     {
-        cout << "Its Player " << currenr_marker << "'s turn. Enter your position: ";
+        cout << "Its Player " << current_marker << "'s turn. Enter your position: ";
         int pos;
         cin >> pos;
         if (pos < 1 || pos > 9)
@@ -102,12 +103,12 @@ void start()
 
         if (won == 1)
         {
-            cout << "Congrates!, Player " << currenr_marker << " Won!!!\n\n\n";
+            cout << "Congrates!, Player " << current_marker << " Won!!!\n\n\n";
             break;
         }
         if (won == 2)
         {
-            cout << "Congrates!, Player " << currenr_marker << " Won!!!\n\n\n";
+            cout << "Congrates!, Player " << current_marker << " Won!!!\n\n\n";
             break;
         }
         swapPlayer();
