@@ -1,4 +1,4 @@
-#Artificial Intelligence Problems
+Artificial Intelligence Problems
 
 1. Best First Search
 2. A* Search Algorithm
