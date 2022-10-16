@@ -6,6 +6,7 @@ int const n = 3;
 // printing board
 void printBoard(vector<vector<int>> board)
 {
+    cout << "+++++++++++++++++++++" << endl;
     for (int i = 0; i < N; i++)
     {
         for (int j = 0; j < N; j++)
@@ -14,6 +15,7 @@ void printBoard(vector<vector<int>> board)
         }
         cout << endl;
     }
+    cout << "+++++++++++++++++++++" << endl;
 }
 
 // check row
@@ -116,6 +118,8 @@ bool canInsertBoard(vector<vector<int>> board, int nextAvailabelSpace, int num)
 
 bool solveBoard(vector<vector<int>> &board)
 {
+    // sleep(1);
+    // printBoard(board);
     int nextAvailabaleSpace = findNextSpace(board);
     if (nextAvailabaleSpace == -1)
         return true;
