@@ -119,7 +119,7 @@ bool canInsertBoard(vector<vector<int>> board, int nextAvailabelSpace, int num)
 bool solveBoard(vector<vector<int>> &board)
 {
     // sleep(1);
-    // printBoard(board);
+    // printBoard(board);1
     int nextAvailabaleSpace = findNextSpace(board);
     if (nextAvailabaleSpace == -1)
         return true;
